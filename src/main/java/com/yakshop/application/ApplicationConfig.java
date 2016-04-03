@@ -8,6 +8,7 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 import com.yakshop.ShopResource;
+import com.yakshop.service.InventoryService;
 
 @ApplicationPath("/shop")
 public class ApplicationConfig extends Application {
@@ -18,7 +19,8 @@ public class ApplicationConfig extends Application {
 
 		System.out.println("REST configuration starting: getClasses()");
 		resources.add(ShopResource.class);
-		//resources.add(CustomerResource.class);
+		resources.add(InventoryService.class);
+		// resources.add(CustomerResource.class);
 		System.out.println("REST configuration ended successfully.");
 		return resources;
 	}
