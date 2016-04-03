@@ -1,7 +1,0 @@
-com/yakshop/model/Labyak.class
-com/yakshop/application/ApplicationConfig.class
-com/yakshop/core/bean/StoreShopInfo.class
-com/yakshop/ShopResource.class
-com/yakshop/core/bean/ShopResponse.class
-com/yakshop/model/Herd.class
-com/yakshop/service/InventoryService.class

@@ -5,8 +5,8 @@ import com.yakshop.model.Herd;
 public class ShopResponse {
 
 	private Herd shopInfo;
-	private float totalMilk;
-	private float totalSkin;
+	private double totalMilk;
+	private int totalSkin;
 
 	public Herd getShopInfo() {
 		return shopInfo;
@@ -16,20 +16,21 @@ public class ShopResponse {
 		this.shopInfo = shopInfo;
 	}
 
-	public float getTotalMilk() {
+	public double getTotalMilk() {
 		return totalMilk;
 	}
 
-	public void setTotalMilk(float totalMilk) {
+	public void setTotalMilk(double totalMilk) {
 		this.totalMilk = totalMilk;
 	}
 
-	public float getTotalSkin() {
+	public int getTotalSkin() {
 		return totalSkin;
 	}
 
-	public void setTotalSkin(float totalSkin) {
+	public void setTotalSkin(int totalSkin) {
 		this.totalSkin = totalSkin;
 	}
 
+	
 }

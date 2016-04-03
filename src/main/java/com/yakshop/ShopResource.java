@@ -11,11 +11,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.yakshop.core.bean.StoreShopInfo;
 import com.yakshop.model.Herd;
+import com.yakshop.service.InventoryService;
 
 @Path("/shopinfo")
 public class ShopResource {
+
+	InventoryService inventory;
 
 	@GET
 	@Path("hello")
@@ -29,8 +31,7 @@ public class ShopResource {
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Path("initShop/{day}")
 	public Response storeShopInfo(Herd herdInfo, @PathParam("day") int day) {
-		StoreShopInfo shopInfo = null;
-		
-		return Response.status(200).entity(shopInfo).build();
+		inventory = new InventoryService();
+		return Response.status(200).entity(inventory.getShopInfo(herdInfo, day)).build();
 	}
 }
